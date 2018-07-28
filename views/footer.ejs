@@ -1,0 +1,23 @@
+<br>
+<br>
+<footer class="main-bg text-center text-white p-3 footer">
+	&copy;  <%=new Date().getFullYear()%>
+	<br>
+	<a href="#top" class="text-white"><i class="fas fa-arrow-circle-up"></i></a>
+</footer>
+<%
+locals.info.forEach(data=>{
+	%>
+	<script>
+	swal({
+		type : '<%=data.type%>',
+		title : '<%=data.type%>',
+		html : `<%-data.msg%>`
+	})
+	</script>
+	<%
+})
+%>
+
+</body>
+</html>
