@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 var port = process.env.PORT || 3000
 const bparser = require('body-parser')
+const flash = require('express-flash')
 app.use(bparser.urlencoded({extended : false}))
 const session = require('express-session')
 app.use(session({
@@ -9,11 +10,10 @@ app.use(session({
 	saveUninitialized : false,
 	resave : false	
 }))
-const flash = require('express-flash')
 app.use(flash())
 //global flash message as info
 app.use((req,res,next)=>{
-	res.locals.info = req.flash('next')
+	res.locals.info = req.flash('info')
 	next()
 })
 //use public for static files storage dir

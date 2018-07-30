@@ -1,0 +1,28 @@
+<%include header%>
+<%include nav%>
+<div class="container">
+	<br>
+	<div class="card card-body col-md-6 mx-auto ">
+		<h5 class="text-center">
+			<strong>Login</strong>
+		</h5>
+		<br>
+		<form action="" method="post">
+			<label for="username">Enter your username or email</label>
+			<input type="text" name="username" id="username" class="form-control" placeholder="Enter your username or email" required="true">
+			<br>
+			<label for="password">Enter your password</label>
+			<input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required="true">
+			<br>
+			<input type="submit" value="Login" class="btn btn-success btn-sm btn-block">
+		</form>
+		<br>
+		Not a member yet?
+		<br>
+		<a href="/register" class="btn btn-sm btn-info">Register Now</a>
+	</div>
+</div>
+<script>
+$.backstretch('/images/event.jpg')
+</script>
+<%include footer%>
